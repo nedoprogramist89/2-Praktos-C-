@@ -1,0 +1,24 @@
+﻿<Window x:Class="PracticalWork2.NoteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Создание заметки" Height="500" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Название заметки:" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Times New Roman" FontSize="26"/>
+        <TextBlock Grid.Row="1" Text="Описание заметки:" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Times New Roman" FontSize="26" Margin="0,10,0,0"/>
+        <TextBox x:Name="NoteName" Grid.Column="1" Text="Название...." VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Times New Roman" FontSize="26" TextChanged="NoteName_TextChanged"/>
+        <TextBox x:Name="NoteDescription" Grid.Row="1" Text="Описание....." VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Times New Roman" FontSize="26" TextChanged="NoteDescription_TextChanged" Margin="20,45,0,0" TextWrapping="Wrap"/>
+        <Button Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Content="Завершить" Click="Button_Click" Margin="0,0,21,26"/>
+    </Grid>
+</Window>
